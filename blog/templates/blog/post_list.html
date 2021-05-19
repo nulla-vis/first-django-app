@@ -1,6 +1,12 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-
+{% if user.is_authenticated %}
+<h4>
+    <a href="{% url 'post_new' %}" class="top-menu">
+        {% include './icons/file-earmark-plus.svg' %}New Post
+    </a>
+</h4>
+{% endif %}
 <div class="row">
     {% for post in posts %}
     <div class="col-md-6 mt-4">
@@ -9,7 +15,7 @@
                 <h5 class="card-title mb-0"><a href="{% url 'post_detail' pk=post.pk %}">{{post.title|title}}</a></h5>
                 <date class="date"><small>published: {{post.published_date}}</small></date>
                 <p class="card-text mt-3">{{post.text|linebreaksbr}}</p>
-                <a href="#" class="card-link">Edit</a>
+                <a href="{% url 'post_edit' pk=post.pk %}" class="card-link">Edit</a>
                 <a href="#" class="card-link">Delete</a>
             </div>
         </div>

@@ -23,3 +23,12 @@ h2, h5 a{
 .date {
     color: #828282;
 }
+
+.save {
+    float: right;
+}
+
+.post-form textarea,
+.post-form input {
+    width: 100%;
+}
