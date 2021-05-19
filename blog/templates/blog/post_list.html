@@ -25,26 +25,18 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
-                <div class="card" style="width: 18rem;">
+            {% for post in posts %}
+            <div class="col-md-6">
+                <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title">Blog title</h5>
-                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus fugiat explicabo quis! Velit dolorum repellat incidunt corporis asperiores officia possimus molestias reprehenderit quo. Veniam consequatur, enim non sapiente obcaecati est!</p>
+                      <h5 class="card-title"><a href="">{{post.title}}</a></h5>
+                      <p class="card-text">{{post.text|linebreaksbr}}</p>
                       <a href="#" class="card-link">Edit</a>
                       <a href="#" class="card-link">Delete</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">Blog title</h5>
-                      <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus fugiat explicabo quis! Velit dolorum repellat incidunt corporis asperiores officia possimus molestias reprehenderit quo. Veniam consequatur, enim non sapiente obcaecati est!</p>
-                      <a href="#" class="card-link">Edit</a>
-                      <a href="#" class="card-link">Delete</a>
-                    </div>
-                </div>>
-            </div>
+            {% endfor %}
         </div>
     </div>
 
