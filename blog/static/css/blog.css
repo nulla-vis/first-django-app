@@ -1,0 +1,25 @@
+.jumbotron {
+    background-image: url("https://images.unsplash.com/photo-1621356312324-14b9222243a5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1101&q=80"); 
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+h2, h5 a{
+    color: #F98C5E;
+    font-family: 'Lobster';
+}
+
+.display-4 {
+    color: #fff;
+}
+
+.date {
+    color: #828282;
+}
